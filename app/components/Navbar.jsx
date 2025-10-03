@@ -4,7 +4,6 @@ import { Search, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, clearItems } from "../store/dataSlice";
-import { FiPlusSquare } from "react-icons/fi";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

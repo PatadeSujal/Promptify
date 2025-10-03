@@ -1,7 +1,7 @@
 // app/prompts/page.js (Next.js App Router)
 "use client";
+import React, { Suspense, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
 import ShowCart from "../components/ShowCart";
 
 export default function PromptsPage() {
@@ -17,9 +17,10 @@ export default function PromptsPage() {
   }, [page, router]);
 
   return (
-     <div >
-        <ShowCart page = {page} />
-
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ShowCart page={page} />
+      </Suspense>
     </div>
   );
 }

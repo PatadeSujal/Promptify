@@ -16,7 +16,7 @@ const PromptDataSchema = new Schema(
       required: true,
     },
     hashtags: {
-      type: [String],
+      type: String,
       required: true,
     },
   },

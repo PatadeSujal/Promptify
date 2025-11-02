@@ -14,7 +14,7 @@ export default function StyleCard({ name, image_url, prompt, hashtags }) {
   };
 
   return (
-    <div className="w-full max-w-sm mx-auto bg-white rounded-lg border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-200">
+    <div className="w-full max-w-sm mx-auto bg-white rounded-lg border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-200 flex flex-col">
       {/* Image Container */}
       <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden rounded-t-lg">
         {!imageLoaded && (
@@ -74,10 +74,11 @@ export default function StyleCard({ name, image_url, prompt, hashtags }) {
           })}
         </div>
 
+      </div>
         {/* Copy Button */}
         <button
           onClick={handleCopyPrompt}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 sm:py-3 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="w-[85%] mx-auto mb-2.5 border flex justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 sm:py-3 px-4 rounded-md transition-colors duration-200  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
           {copied ? (
             <span className="flex items-center justify-center space-x-2">
@@ -115,7 +116,6 @@ export default function StyleCard({ name, image_url, prompt, hashtags }) {
             </span>
           )}
         </button>
-      </div>
     </div>
   );
 }

@@ -64,7 +64,7 @@ const ShowCart = ({ page }) => {
                   image_url={item.image_link}
                  
 
-                  hashtags={item.hashtags ? item.hashtags.split(" ") : []}
+                  hashtags= {item.Hashtags ? item.Hashtags.split(" ") : []}
                 />
               ))
             ) : (
